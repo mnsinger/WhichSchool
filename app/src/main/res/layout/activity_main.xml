@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/years"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:id="@+id/yearFrom"
+            android:hint="Year from"
+            android:layout_weight="1"
+            android:background="#ffff00"
+            android:minEms="4"
+            android:inputType="textCapWords"
+            android:maxLength="4"
+            android:digits="0123456789" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text=" To "
+            android:id="@+id/to" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:id="@+id/yearTo"
+            android:layout_toEndOf="@id/to"
+            android:hint="Year To"
+            android:layout_weight="1"
+            android:background="#ffff00"
+            android:minEms="4"
+            android:maxLength="4"
+            android:digits="0123456789" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_below="@+id/years"
+        android:id="@+id/yearsButton"
+        android:text="Get Random Player" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_below="@id/yearsButton"
+        android:text="Player"
+        android:id="@+id/playerName"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerInfo1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@id/playerName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:id="@+id/playedFrom"
+            android:hint="Played from"
+            android:layout_weight="1"
+            android:background="#27df02"
+            android:minEms="4"
+            android:inputType="textCapWords"
+            android:maxLength="4"
+            android:digits="0123456789" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text=" To "
+            android:id="@+id/div1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:id="@+id/playedTo"
+            android:layout_toEndOf="@id/div1"
+            android:hint="Played To"
+            android:layout_weight="1"
+            android:background="#27df02"
+            android:minEms="4"
+            android:inputType="textCapWords"
+            android:maxLength="4"
+            android:digits="0123456789" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerInfo2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/playerInfo1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:id="@+id/position"
+            android:hint="Position"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="#27df02"
+            android:minEms="4"
+            android:inputType="textCapWords"
+            android:maxLength="4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:id="@+id/height"
+            android:hint="Height"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="#27df02"
+            android:minEms="4"
+            android:inputType="textCapWords"
+            android:maxLength="4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:id="@+id/weight"
+            android:layout_toEndOf="@id/div1"
+            android:hint="Weight"
+            android:layout_weight="1"
+            android:background="#27df02"
+            android:minEms="4"
+            android:inputType="textCapWords"
+            android:maxLength="4"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerInfo3"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/playerInfo2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:id="@+id/bday"
+            android:hint="Born"
+            android:layout_weight="1"
+            android:background="#27df02" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:layout_below="@+id/playerInfo3"
+        android:id="@+id/college"
+        android:text="WHICH COLLEGE?" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:id="@+id/note"
+        android:text="* represents hall of famer"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
